@@ -1,0 +1,208 @@
+body{
+  background-color: #5D4954; 
+}
+
+
+
+.header-left{
+    color: white;
+
+}
+
+.headr-right{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-content{
+    display: flex;
+   justify-content: space-between;
+   margin: 15px;
+
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+    margin-top: 50px;
+    background-image: url(/pics/realistic-american-football-stadium_52683-54053.jpg);
+    background-size:cover;
+}
+
+.about-pic{
+    height: 500px;
+
+    width: 400px;
+    border: 1px solid black;
+}
+
+.actual-pic{
+height: 500px;
+width: 400px;
+}
+
+.about-text{
+    display: flex;
+    padding: 25px;
+    size: 100%;
+    font-size: 10px;
+    height: 300px;
+    width: 700px;
+   border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(78, 56, 70, 0.9);
+    box-shadow: 5px 5px 15px;
+}
+
+.media-slides{
+    height: 100%;
+    display: grid;
+    padding-left: 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid black;
+    margin-top: 50px;
+    grid-gap: 50px;
+    padding-top: 50px;
+    padding-bottom:50px;
+    
+}
+
+footer{
+   
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.links{
+    height: 200px;
+    width: 200px;
+    
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #5D4954;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      overflow-x: hidden;
+  }
+  
+  .nav-links {
+      position: fixed;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: #5D4954;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+  
+  .nav-links li {
+      opacity: 0;
+  }
+  
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+}
+
+.nav-active {
+      transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
